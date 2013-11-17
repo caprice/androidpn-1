@@ -1,0 +1,89 @@
+{DEBUG} [2013-11-17 21:41:35,862] <org.apache.commons.configuration.ConfigurationUtils> : ConfigurationUtils.locate(): base is C:\Users\hp\git\androidpn-1\androidpn-server-bin-tomcat, name is config.xml
+{DEBUG} [2013-11-17 21:41:35,871] <org.apache.commons.configuration.ConfigurationUtils> : Loading configuration from the context classpath (config.xml)
+{DEBUG} [2013-11-17 21:41:36,054] <org.apache.commons.configuration.ConfigurationUtils> : ConfigurationUtils.locate(): base is C:\Users\hp\git\androidpn-1\androidpn-server-bin-tomcat, name is config.properties
+{DEBUG} [2013-11-17 21:41:36,062] <org.apache.commons.configuration.ConfigurationUtils> : Loading configuration from the context classpath (config.properties)
+{INFO } [2013-11-17 21:41:36,086] <org.androidpn.server.util.ConfigManager> : Configuration loaded: config.xml
+{INFO } [2013-11-17 21:41:36,200] <org.springframework.context.support.ClassPathXmlApplicationContext> : Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@779b04e2: display name [org.springframework.context.support.ClassPathXmlApplicationContext@779b04e2]; startup date [Sun Nov 17 21:41:36 CST 2013]; root of context hierarchy
+{INFO } [2013-11-17 21:41:36,390] <org.springframework.beans.factory.xml.XmlBeanDefinitionReader> : Loading XML bean definitions from class path resource [spring-config.xml]
+{INFO } [2013-11-17 21:41:36,972] <org.springframework.context.support.ClassPathXmlApplicationContext> : Bean factory for application context [org.springframework.context.support.ClassPathXmlApplicationContext@779b04e2]: org.springframework.beans.factory.support.DefaultListableBeanFactory@27a897a9
+{INFO } [2013-11-17 21:41:37,284] <org.springframework.beans.factory.config.PropertyPlaceholderConfigurer> : Loading properties file from class path resource [jdbc.properties]
+{INFO } [2013-11-17 21:41:37,524] <org.springframework.beans.factory.support.DefaultListableBeanFactory> : Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@27a897a9: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,userDao,userService,org.springframework.beans.factory.config.CustomEditorConfigurer#0,xmppHandler,filterChainBuilder,ioAcceptor]; root of factory hierarchy
+{INFO } [2013-11-17 21:41:38,233] <org.hibernate.cfg.annotations.Version> : Hibernate Annotations 3.4.0.GA
+{INFO } [2013-11-17 21:41:38,254] <org.hibernate.cfg.Environment> : Hibernate 3.3.1.GA
+{INFO } [2013-11-17 21:41:38,259] <org.hibernate.cfg.Environment> : hibernate.properties not found
+{INFO } [2013-11-17 21:41:38,277] <org.hibernate.cfg.Environment> : Bytecode provider name : javassist
+{INFO } [2013-11-17 21:41:38,332] <org.hibernate.cfg.Environment> : using JDK 1.4 java.sql.Timestamp handling
+{INFO } [2013-11-17 21:41:38,414] <org.hibernate.annotations.common.Version> : Hibernate Commons Annotations 3.1.0.GA
+{INFO } [2013-11-17 21:41:38,421] <org.hibernate.cfg.Configuration> : configuring from url: file:/C:/Users/hp/git/androidpn-1/androidpn-server-bin-tomcat/WebRoot/WEB-INF/classes/hibernate.cfg.xml
+{INFO } [2013-11-17 21:41:38,682] <org.hibernate.cfg.Configuration> : Configured SessionFactory: null
+{INFO } [2013-11-17 21:41:38,779] <org.hibernate.cfg.AnnotationBinder> : Binding entity from annotated class: org.androidpn.server.model.User
+{INFO } [2013-11-17 21:41:38,831] <org.hibernate.cfg.annotations.EntityBinder> : Bind entity org.androidpn.server.model.User on table apn_user
+{INFO } [2013-11-17 21:41:38,891] <org.hibernate.cfg.AnnotationConfiguration> : Hibernate Validator not found: ignoring
+{INFO } [2013-11-17 21:41:38,891] <org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean> : Building new Hibernate SessionFactory
+{INFO } [2013-11-17 21:41:38,894] <org.hibernate.cfg.search.HibernateSearchEventListenerRegister> : Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+{INFO } [2013-11-17 21:41:39,094] <org.hibernate.connection.ConnectionProviderFactory> : Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+{WARN } [2013-11-17 21:41:41,031] <org.hibernate.util.JDBCExceptionReporter> : SQL Error: 0, SQLState: null
+{ERROR} [2013-11-17 21:41:41,031] <org.hibernate.util.JDBCExceptionReporter> : Cannot create PoolableConnectionFactory (Access denied for user 'root'@'localhost' (using password: NO))
+{WARN } [2013-11-17 21:41:41,032] <org.hibernate.cfg.SettingsFactory> : Could not obtain connection metadata
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Access denied for user 'root'@'localhost' (using password: NO))
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1225)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:880)
+	at org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider.getConnection(LocalDataSourceConnectionProvider.java:82)
+	at org.hibernate.cfg.SettingsFactory.buildSettings(SettingsFactory.java:111)
+	at org.hibernate.cfg.Configuration.buildSettings(Configuration.java:2101)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1325)
+	at org.hibernate.cfg.AnnotationConfiguration.buildSessionFactory(AnnotationConfiguration.java:867)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.newSessionFactory(LocalSessionFactoryBean.java:814)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:732)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1369)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:473)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:423)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at org.androidpn.server.xmpp.XmppServer.start(XmppServer.java:86)
+	at org.androidpn.server.xmpp.XmppServer.<init>(XmppServer.java:71)
+	at org.androidpn.server.xmpp.XmppServer.getInstance(XmppServer.java:57)
+	at org.androidpn.server.xmpp.session.SessionManager.<init>(SessionManager.java:59)
+	at org.androidpn.server.xmpp.session.SessionManager.getInstance(SessionManager.java:70)
+	at org.androidpn.server.xmpp.push.NotificationManager.<init>(NotificationManager.java:48)
+	at DemoAndroidpn.main(DemoAndroidpn.java:20)
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: NO)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1055)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:956)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3491)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3423)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:910)
+	at com.mysql.jdbc.MysqlIO.secureAuth411(MysqlIO.java:3923)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1273)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2031)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:718)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:406)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:302)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:282)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:294)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1247)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1221)
+	... 32 more
+{INFO } [2013-11-17 21:41:41,042] <org.springframework.beans.factory.support.DefaultListableBeanFactory> : Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@27a897a9: defining beans [propertyConfigurer,dataSource,sessionFactory,transactionManager,userDao,userService,org.springframework.beans.factory.config.CustomEditorConfigurer#0,xmppHandler,filterChainBuilder,ioAcceptor]; root of factory hierarchy
+{INFO } [2013-11-17 21:41:41,049] <org.androidpn.server.xmpp.XmppServer> : XmppServer stopped
+{DEBUG} [2013-11-17 21:41:41,049] <org.androidpn.server.xmpp.push.NotificationManager> : sendBroadcast()...
+{INFO } [2013-11-17 21:41:41,074] <org.androidpn.server.xmpp.XmppServer> : XmppServer stopped
+{INFO } [2013-11-17 21:41:41,074] <org.androidpn.server.xmpp.XmppServer> : Server halted
